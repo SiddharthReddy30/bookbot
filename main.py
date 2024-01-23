@@ -6,11 +6,11 @@ def main():
     print(f'No of words = {get_book_word_count(text)}')
     print(f'Alphabet count = {str(get_alphabets_count(text))}')
 
-def get_book_text(bookpath):
+def get_book_text(bookpath: Path):
     with open(bookpath) as f:
         return f.read()
 
-def get_book_word_count(text):
+def get_book_word_count(text: str):
     return len(text.split())
 
 def get_alphabets_count(text: str):
