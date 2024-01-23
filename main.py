@@ -1,6 +1,7 @@
 from pathlib import Path
 def main():
-    filePath = Path.cwd().joinpath('./books/frankenstein.txt')
+    book_path = 'books/frankenstein.txt'
+    filePath = Path.cwd().joinpath(book_path)
     text = get_book_text(filePath)
     print(text)
     print(f'No of words = {get_book_word_count(text)}')
