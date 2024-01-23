@@ -3,10 +3,8 @@ def main():
     book_path = 'books/frankenstein.txt'
     filePath = Path.cwd().joinpath(book_path)
     text = get_book_text(filePath)
-    print(text)
-    print(f'No of words = {get_book_word_count(text)}')
-    print(f'Alphabet count = {str(get_alphabets_count(text))}')
     generate_report(book_path, text)
+
 def get_book_text(bookpath: Path):
     with open(bookpath) as f:
         return f.read()
